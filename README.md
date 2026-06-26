@@ -138,6 +138,70 @@ The plugin uses:
 - `hooks/claude-codex-hooks.json` for lifecycle injection
 - `dist/hooks/*.mjs` for runtime hook scripts
 
+### Uninstall From Codex
+
+If you installed SeniorMode from the Codex plugin marketplace, first open Codex
+and remove or disable it from the plugin UI:
+
+```txt
+/plugins
+```
+
+Then remove the marketplace from your terminal:
+
+```bash
+codex plugin marketplace remove seniormode
+```
+
+If that command says the marketplace is not installed, SeniorMode may still be
+installed as a plugin. Check `/plugins` again and remove or disable it there.
+
+If you trusted hooks, open the hook UI and remove or untrust SeniorMode hooks:
+
+```txt
+/hooks
+```
+
+Restart Codex after uninstalling.
+
+Manual fallback for stale local state:
+
+1. Open `~/.codex/config.toml`.
+2. Remove this plugin block:
+
+```toml
+[plugins."seniormode@seniormode"]
+enabled = true
+```
+
+3. Remove hook state blocks whose names start with:
+
+```txt
+hooks.state."seniormode@seniormode:
+```
+
+4. Remove cached plugin data:
+
+```bash
+rm -rf ~/.codex/plugins/cache/seniormode
+rm -rf ~/.codex/plugins/data/seniormode-seniormode
+```
+
+5. Restart Codex.
+
+If you installed SeniorMode skills with npm instead of the plugin marketplace,
+remove the copied skill folders:
+
+```bash
+rm -rf ~/.agents/skills/seniormode*
+```
+
+For a project-only install:
+
+```bash
+rm -rf .agents/skills/seniormode*
+```
+
 ## Use With OpenCode
 
 Add the plugin to `opencode.json`:
