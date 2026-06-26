@@ -1,0 +1,21 @@
+{
+  "name": "seniormode",
+  "interface": {
+    "displayName": "SeniorMode"
+  },
+  "plugins": [
+    {
+      "name": "seniormode",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/YOUR_GITHUB_USERNAME/seniormode.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

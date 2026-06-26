@@ -1,0 +1,7 @@
+---
+description: Review code for SeniorMode fit
+---
+
+Review this plan, diff, or implementation in SeniorMode review mode. Lead with
+bugs and risks, then identify overengineering, missed reuse, unnecessary
+dependencies, unnecessary abstractions, and missing focused tests.

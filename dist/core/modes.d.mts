@@ -1,0 +1,10 @@
+export declare const DEFAULT_MODE: "full";
+export declare const RUNTIME_MODES: readonly ["off", "lite", "full", "strict"];
+export declare const TASK_MODES: readonly ["review", "audit", "debt", "gain", "help"];
+export declare const VALID_MODES: readonly ["off", "lite", "full", "strict", "review", "audit", "debt", "gain", "help"];
+export type RuntimeMode = (typeof RUNTIME_MODES)[number];
+export type TaskMode = (typeof TASK_MODES)[number];
+export type SeniorModeMode = (typeof VALID_MODES)[number];
+export declare function normalizeRuntimeMode(value: unknown): RuntimeMode | null;
+export declare function normalizeMode(value: unknown): SeniorModeMode | null;
+export declare function isTaskMode(mode: SeniorModeMode): mode is TaskMode;

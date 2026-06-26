@@ -1,0 +1,29 @@
+{
+  "name": "seniormode",
+  "version": "0.1.0",
+  "description": "Senior-dev rules for AI coding agents.",
+  "author": {
+    "name": "SeniorMode contributors"
+  },
+  "homepage": "https://github.com/your-org/seniormode",
+  "repository": "https://github.com/your-org/seniormode",
+  "license": "MIT",
+  "keywords": ["yagni", "code-review", "coding-agent", "productivity"],
+  "skills": "./skills/",
+  "hooks": "./hooks/claude-codex-hooks.json",
+  "interface": {
+    "displayName": "SeniorMode",
+    "shortDescription": "Senior developer behavior layer",
+    "longDescription": "Prefer reuse, standard library, native platform features, and the smallest correct implementation.",
+    "developerName": "SeniorMode contributors",
+    "category": "Productivity",
+    "capabilities": ["Instructions", "Lifecycle hooks"],
+    "websiteURL": "https://github.com/your-org/seniormode",
+    "defaultPrompt": [
+      "Use SeniorMode for this task.",
+      "Review this diff for over-engineering.",
+      "Find the simplest correct implementation."
+    ],
+    "brandColor": "#1F2937"
+  }
+}

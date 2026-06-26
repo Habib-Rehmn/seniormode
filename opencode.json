@@ -1,0 +1,3 @@
+{
+  "plugin": ["./dist/opencode/plugin.mjs"]
+}

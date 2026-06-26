@@ -1,0 +1,44 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT:-${CLAUDE_PLUGIN_ROOT}}/dist/hooks/activate.mjs\"; exit 0",
+            "commandWindows": "$root = if ($env:PLUGIN_ROOT) { $env:PLUGIN_ROOT } else { $env:CLAUDE_PLUGIN_ROOT }; if (Get-Command node -ErrorAction SilentlyContinue) { node \"$root\\dist\\hooks\\activate.mjs\" }",
+            "timeout": 5,
+            "statusMessage": "Loading SeniorMode..."
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT:-${CLAUDE_PLUGIN_ROOT}}/dist/hooks/subagent.mjs\"; exit 0",
+            "commandWindows": "$root = if ($env:PLUGIN_ROOT) { $env:PLUGIN_ROOT } else { $env:CLAUDE_PLUGIN_ROOT }; if (Get-Command node -ErrorAction SilentlyContinue) { node \"$root\\dist\\hooks\\subagent.mjs\" }",
+            "timeout": 5,
+            "statusMessage": "Loading SeniorMode..."
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT:-${CLAUDE_PLUGIN_ROOT}}/dist/hooks/mode-tracker.mjs\"; exit 0",
+            "commandWindows": "$root = if ($env:PLUGIN_ROOT) { $env:PLUGIN_ROOT } else { $env:CLAUDE_PLUGIN_ROOT }; if (Get-Command node -ErrorAction SilentlyContinue) { node \"$root\\dist\\hooks\\mode-tracker.mjs\" }",
+            "timeout": 5,
+            "statusMessage": "Tracking SeniorMode..."
+          }
+        ]
+      }
+    ]
+  }
+}

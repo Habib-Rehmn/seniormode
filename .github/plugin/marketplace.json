@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    {
+      "name": "seniormode",
+      "description": "Senior-dev rules for AI coding agents.",
+      "path": "."
+    }
+  ]
+}

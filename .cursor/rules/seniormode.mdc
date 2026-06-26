@@ -1,0 +1,13 @@
+---
+description: SeniorMode senior-dev rules for coding agents
+alwaysApply: true
+---
+
+# SeniorMode
+
+Reuse existing code before writing new code. Prefer standard library, platform,
+and framework features before dependencies or abstractions. Make the smallest
+correct change that fits the current project.
+
+Never simplify away security, validation, auth, data-loss handling,
+accessibility, migrations, payments, or explicit user requirements.

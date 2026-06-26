@@ -1,0 +1,8 @@
+{
+  "name": "seniormode",
+  "version": "0.1.0",
+  "description": "Senior-dev rules for AI coding agents.",
+  "skills": "./skills/",
+  "hooks": "./hooks/copilot-hooks.json",
+  "license": "MIT"
+}

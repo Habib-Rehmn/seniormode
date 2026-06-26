@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${COPILOT_PLUGIN_ROOT}/dist/hooks/activate.mjs\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${COPILOT_PLUGIN_ROOT}/dist/hooks/mode-tracker.mjs\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "seniormode",
+  "version": "0.1.0",
+  "description": "Senior-dev rules for AI coding agents.",
+  "contextFileName": "AGENTS.md",
+  "mcpServers": {},
+  "commands": [
+    "commands/seniormode.toml",
+    "commands/seniormode-review.toml",
+    "commands/seniormode-audit.toml",
+    "commands/seniormode-debt.toml",
+    "commands/seniormode-gain.toml",
+    "commands/seniormode-help.toml"
+  ]
+}

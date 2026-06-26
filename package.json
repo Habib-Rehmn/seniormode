@@ -1,0 +1,69 @@
+{
+  "name": "seniormode",
+  "version": "0.1.1",
+  "description": "Senior-dev rules for AI coding agents.",
+  "keywords": [
+    "ai-agents",
+    "coding-agent",
+    "opencode-plugin",
+    "codex",
+    "claude",
+    "skills",
+    "yagni"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "seniormode": "./dist/cli/index.mjs"
+  },
+  "main": "./dist/core/index.mjs",
+  "exports": {
+    ".": "./dist/core/index.mjs",
+    "./core": "./dist/core/index.mjs",
+    "./hooks/activate": "./dist/hooks/activate.mjs",
+    "./hooks/mode-tracker": "./dist/hooks/mode-tracker.mjs",
+    "./hooks/subagent": "./dist/hooks/subagent.mjs",
+    "./opencode/plugin": "./dist/opencode/plugin.mjs",
+    "./plugin": "./dist/opencode/plugin.mjs"
+  },
+  "files": [
+    "dist",
+    "skills",
+    "hooks",
+    "commands",
+    "docs",
+    "examples",
+    ".opencode",
+    "opencode.json",
+    ".claude-plugin",
+    ".codex-plugin",
+    "gemini-extension.json",
+    ".github/plugin",
+    ".github/copilot-instructions.md",
+    ".cursor",
+    ".windsurf",
+    ".clinerules",
+    ".openclaw",
+    "AGENTS.md",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "dev": "tsx src/cli/index.mts",
+    "prepublishOnly": "npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,2 @@
+description = "Find intentional SeniorMode simplifications"
+prompt = "Find seniormode comments and intentional simplifications. Report whether each should be kept, revisited, or fixed now."
