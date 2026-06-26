@@ -87,7 +87,7 @@ Example marketplace file:
       "name": "seniormode",
       "source": {
         "source": "url",
-        "url": "https://github.com/YOUR_GITHUB_USERNAME/seniormode.git",
+        "url": "https://github.com/Habib-Rehmn/seniormode.git",
         "ref": "main"
       },
       "policy": {
@@ -103,7 +103,7 @@ Example marketplace file:
 Then install it in Codex:
 
 ```bash
-codex plugin marketplace add YOUR_GITHUB_USERNAME/seniormode
+codex plugin marketplace add Habib-Rehmn/seniormode
 codex
 ```
 

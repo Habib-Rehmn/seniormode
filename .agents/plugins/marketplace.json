@@ -8,7 +8,7 @@
       "name": "seniormode",
       "source": {
         "source": "url",
-        "url": "https://github.com/YOUR_GITHUB_USERNAME/seniormode.git",
+        "url": "https://github.com/Habib-Rehmn/seniormode.git",
         "ref": "main"
       },
       "policy": {
