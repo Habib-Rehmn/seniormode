@@ -100,14 +100,14 @@ Example marketplace file:
 }
 ```
 
-Then install it in Codex:
+Run these commands in your terminal:
 
 ```bash
 codex plugin marketplace add Habib-Rehmn/seniormode
 codex
 ```
 
-Inside Codex:
+Then type this in the Codex chat input, not in the terminal:
 
 ```txt
 /plugins
@@ -121,6 +121,16 @@ Install SeniorMode, then:
 
 Review and trust the SeniorMode lifecycle hooks. Start a new thread after
 trusting the hooks.
+
+If you update the marketplace file or plugin repo, refresh Codex's cached
+marketplace copy from the terminal:
+
+```bash
+codex plugin marketplace upgrade seniormode
+codex
+```
+
+Then open `/plugins` again in the Codex chat input.
 
 The plugin uses:
 
